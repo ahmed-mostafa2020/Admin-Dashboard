@@ -193,12 +193,12 @@ export const chartBoxProduct = {
   dataKey: "products",
   percentage: 21,
   chartData: [
-    { name: "Sun", products: 400 },
-    { name: "Mon", products: 600 },
+    { name: "Sun", products: 200 },
+    { name: "Mon", products: 400 },
     { name: "Tue", products: 500 },
     { name: "Wed", products: 700 },
     { name: "Thu", products: 400 },
-    { name: "Fri", products: 500 },
+    { name: "Fri", products: 700 },
     { name: "Sat", products: 450 },
   ],
 };
@@ -211,10 +211,10 @@ export const chartBoxRevenue = {
   percentage: -12,
   chartData: [
     { name: "Sun", revenue: 400 },
-    { name: "Mon", revenue: 600 },
+    { name: "Mon", revenue: 700 },
     { name: "Tue", revenue: 500 },
-    { name: "Wed", revenue: 700 },
-    { name: "Thu", revenue: 400 },
+    { name: "Wed", revenue: 500 },
+    { name: "Thu", revenue: 300 },
     { name: "Fri", revenue: 500 },
     { name: "Sat", revenue: 450 },
   ],
@@ -230,9 +230,9 @@ export const chartBoxConversion = {
     { name: "Sun", ratio: 400 },
     { name: "Mon", ratio: 600 },
     { name: "Tue", ratio: 500 },
-    { name: "Wed", ratio: 700 },
+    { name: "Wed", ratio: 300 },
     { name: "Thu", ratio: 400 },
-    { name: "Fri", ratio: 500 },
+    { name: "Fri", ratio: 700 },
     { name: "Sat", ratio: 450 },
   ],
 };
@@ -244,7 +244,7 @@ export const barChartBoxRevenue = {
   chartData: [
     {
       name: "Sun",
-      profit: 4000,
+      profit: 6000,
     },
     {
       name: "Mon",
@@ -256,15 +256,15 @@ export const barChartBoxRevenue = {
     },
     {
       name: "Wed",
-      profit: 2780,
+      profit: 3780,
     },
     {
       name: "Thu",
-      profit: 1890,
+      profit: 4890,
     },
     {
       name: "Fri",
-      profit: 2390,
+      profit: 4390,
     },
     {
       name: "Sat",
