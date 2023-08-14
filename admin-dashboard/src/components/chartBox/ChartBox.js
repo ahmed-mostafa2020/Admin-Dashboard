@@ -3,40 +3,22 @@ import "./chartBox.scss";
 import { Link } from "react-router-dom";
 import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
 
-export const data = {
-  color: "#8884d8",
-  icon: "/userIcon.svg",
-  title: "Total Users",
-  number: "11.238",
-  dataKey: "users",
-  percentage: 45,
-  chartData: [
-    { name: "Sun", users: 400 },
-    { name: "Mon", users: 600 },
-    { name: "Tue", users: 500 },
-    { name: "Wed", users: 700 },
-    { name: "Thu", users: 400 },
-    { name: "Fri", users: 500 },
-    { name: "Sat", users: 450 },
-  ],
-};
-
-const ChartBox = () => {
+const ChartBox = (props) => {
   return (
     <div className="chartBox">
       <div className="boxInfo">
         <div className="title">
-          <img src={data.icon} alt="icon" />
-          <span>{data.title}</span>
+          <img src={props.icon} alt="icon" />
+          <span>{props.title}</span>
         </div>
-        <h1>{data.number}</h1>
+        <h1>{props.number}</h1>
         <Link to="/">View all</Link>
       </div>
 
       <div className="chartInfo">
         <div className="chart">
           <ResponsiveContainer width="99%" height="100%">
-            <LineChart data={data.chartData}>
+            <LineChart data={props.chartData}>
               <Tooltip
                 contentStyle={{ background: "transparent", border: "none" }}
                 labelStyle={{ display: "none" }}
@@ -44,7 +26,7 @@ const ChartBox = () => {
               />
               <Line
                 type="monotone"
-                dataKey={data.dataKey}
+                dataKey={props.dataKey}
                 stroke="#8884d8"
                 strokeWidth={2}
                 dot={false}
@@ -56,9 +38,9 @@ const ChartBox = () => {
         <div className="texts">
           <span
             className="percentage"
-            style={{ color: data.percentage < 0 ? "tomato" : "limegreen" }}
+            style={{ color: props.percentage < 0 ? "tomato" : "limegreen" }}
           >
-            {data.percentage}%
+            {props.percentage}%
           </span>
           <span className="duration">this month</span>
         </div>
