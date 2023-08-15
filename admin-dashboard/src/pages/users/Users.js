@@ -1,8 +1,15 @@
 import React from "react";
 import "./users.scss";
+import DataTable from "../../components/dataTable/DataTable";
 
 const Users = () => {
-  return <div className="users">Users</div>;
+  return (
+    <div className="users">
+      <h1>Users</h1>
+      <button>Add New User</button>
+      <DataTable />
+    </div>
+  );
 };
 
 export default Users;
