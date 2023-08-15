@@ -22,7 +22,7 @@ const ChartBox = (props) => {
               <Tooltip
                 contentStyle={{ background: "transparent", border: "none" }}
                 labelStyle={{ display: "none" }}
-                position={{ x: 15, y: 65 }}
+                position={{ x: 5, y: 65 }}
               />
               <Line
                 type="monotone"
