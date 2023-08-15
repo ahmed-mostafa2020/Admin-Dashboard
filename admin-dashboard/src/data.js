@@ -193,8 +193,8 @@ export const chartBoxProduct = {
   dataKey: "products",
   percentage: 21,
   chartData: [
-    { name: "Sun", products: 200 },
-    { name: "Mon", products: 400 },
+    { name: "Sun", products: 700 },
+    { name: "Mon", products: 600 },
     { name: "Tue", products: 500 },
     { name: "Wed", products: 700 },
     { name: "Thu", products: 400 },
