@@ -58,6 +58,7 @@ const columns = [
 const Users = () => {
   const [open, setOpen] = useState(false);
 
+  // API
   return (
     <div className="users">
       <div className="info">
@@ -71,6 +72,9 @@ const Users = () => {
         </button>
       </div>
       <DataTable columns={columns} rows={userRows} slug={"users"} />
+
+      {/* TEST THE API */}
+
       {open && <Add setOpen={setOpen} columns={columns} slug={"users"} />}
     </div>
   );
