@@ -8,6 +8,8 @@ import Menu from "./components/menu/Menu";
 import Footer from "./components/footer/Footer";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "./styles/global.scss";
+import User from "./pages/user/User";
+import Product from "./pages/product/Product";
 
 const App = () => {
   const Layout = () => {
@@ -40,8 +42,16 @@ const App = () => {
           element: <Users />,
         },
         {
+          path: "users/:id",
+          element: <User />,
+        },
+        {
           path: "products",
           element: <Products />,
+        },
+        {
+          path: "products/:id",
+          element: <Product />,
         },
         {
           path: "login",
