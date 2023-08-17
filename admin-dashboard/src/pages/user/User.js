@@ -6,7 +6,7 @@ import { singleUser } from "../../data";
 const User = () => {
   return (
     <div className="user">
-      <Single singleUser={singleUser} />
+      <Single {...singleUser} />
     </div>
   );
 };

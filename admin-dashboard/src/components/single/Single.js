@@ -1,7 +1,6 @@
 import React from "react";
 import "./single.scss";
 import {
-  CartesianGrid,
   Legend,
   Line,
   LineChart,
@@ -11,19 +10,19 @@ import {
   YAxis,
 } from "recharts";
 
-const Single = ({ singleUser }) => {
+const Single = (props) => {
   return (
     <div className="single">
       <div className="view">
         <div className="info">
           <div className="topInfo">
-            <img src={singleUser.img} alt="user" />
-            <h1> {singleUser.title} </h1>
+            <img src={props.img} alt="user" />
+            <h1> {props.title} </h1>
             <button>Update</button>
           </div>
 
           <div className="details">
-            {Object.entries(singleUser.info).map((item) => (
+            {Object.entries(props?.info).map((item) => (
               <div className="item" key={item[0]}>
                 <span className="itemTitle"> {item[0]} </span>
                 <span className="itemValue">{item[1]}</span>
@@ -39,7 +38,7 @@ const Single = ({ singleUser }) => {
             <LineChart
               width={500}
               height={300}
-              data={singleUser.chart.data}
+              data={props.chart.data}
               margin={{
                 top: 5,
                 right: 30,
@@ -51,9 +50,9 @@ const Single = ({ singleUser }) => {
               <YAxis />
               <Tooltip />
               <Legend />
-              {singleUser.chart.dataKeys.map((dataKey) => (
+              {props.chart.dataKeys.map((dataKey, index) => (
                 <Line
-                  key={dataKey.name}
+                  key={index}
                   type="monotone"
                   dataKey={dataKey.name}
                   stroke={dataKey.color}
@@ -68,8 +67,8 @@ const Single = ({ singleUser }) => {
       <div className="activities">
         <h1>Latest Activities</h1>
         <ul>
-          {singleUser.activities.map((activity) => (
-            <li key={activity.index}>
+          {props.activities.map((activity, index) => (
+            <li key={index}>
               <div>
                 <p> {activity.text} </p>
                 <time> {activity.time}</time>
