@@ -1,4 +1,12 @@
 @import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
+
+.navbar.light {
+  background-color: $main2-bg;
+}
+.navbar.dark {
+  background-color: $main-bg;
+}
 
 .navbar {
   width: 100%;
@@ -21,7 +29,6 @@
 
     .icon {
       cursor: pointer;
-      color: red;
 
       @include sm {
         display: none;

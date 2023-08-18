@@ -1,6 +1,30 @@
 @import "../../styles/variables.scss";
 @import "../../styles/responsive.scss";
 
+.menu.light {
+  .title {
+    color: $dark-color;
+  }
+
+  .listItem {
+    &:hover {
+      background-color: $light-bg;
+    }
+  }
+}
+
+.menu.dark {
+  .title {
+    color: $soft-color;
+  }
+
+  .listItem {
+    &:hover {
+      background-color: $soft-bg;
+    }
+  }
+}
+
 .menu {
   .item {
     display: flex;

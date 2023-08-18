@@ -16,13 +16,23 @@ a {
   color: inherit;
 }
 
+.light {
+  background-color: $main2-bg;
+}
+
+.dark {
+  background-color: $main-bg;
+  color: $main-color;
+}
+
 .main {
   font-family: "Inter", sans-serif;
 }
 
 .changeTheme {
   text-align: right;
-  margin-right: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
   .themeButton {
     font-size: 25px;
     background-color: transparent;

@@ -13,7 +13,6 @@ import {
 import BarChartBox from "../../components/barChartBox/BarChartBox";
 import PieChartBox from "../../components/pieChartBox/PieChartBox";
 import BigChartBox from "../../components/bigChartBox/BigChartBox";
-import Bugsnag from "@bugsnag/js";
 
 const Home = () => {
   return (
