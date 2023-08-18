@@ -1,13 +1,15 @@
 import React from "react";
 import "./add.scss";
+import { ChangeTheme } from "../../context/ThemeContext";
 const Add = ({ setOpen, columns, slug }) => {
+  const { theme } = ChangeTheme();
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // API
   };
   return (
-    <div className="add">
+    <div className={`add ${theme}`}>
       <div className="modal">
         <span
           className="close"

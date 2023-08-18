@@ -1,12 +1,61 @@
 @import "../../styles/variables.scss";
 
+.add.light {
+  background-color: rgba(0, 0, 0, 0.724);
+
+  .modal {
+    background-color: $main2-bg;
+
+    h1 {
+      color: $dark-color;
+    }
+
+    form {
+      .item {
+        label {
+          font-size: 14px;
+        }
+
+        input {
+          color: $dark-color;
+          border: 1px solid $dark-color;
+        }
+      }
+    }
+  }
+}
+
+.add.dark {
+  background-color: rgba(0, 0, 0, 0.724);
+
+  .modal {
+    background-color: $main-bg;
+
+    h1 {
+      color: $soft-color;
+    }
+
+    form {
+      .item {
+        label {
+          font-size: 14px;
+        }
+
+        input {
+          color: white;
+          border: 1px solid $soft-color;
+        }
+      }
+    }
+  }
+}
+
 .add {
   width: 100vw;
   height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.724);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +107,7 @@
       }
       button {
         width: 100%;
+        background-color: $soft-color;
         padding: 10px;
         font-weight: 600;
         border-radius: 5px;

@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./navbar.scss";
 import { ChangeTheme } from "../../context/ThemeContext";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 
 const Navbar = () => {
   const { theme, setTheme } = ChangeTheme();
-  const [change, setChange] = useState(true);
 
   const handleClick = () => {
     setTheme(theme === "light" ? "dark" : "light");
-    setChange(!change);
   };
 
   return (
@@ -35,15 +33,13 @@ const Navbar = () => {
         </div>
         <img src="/settings.svg" alt="icon" className="icon" />
 
-        <div className="changeTheme">
-          <button className="themeButton" onClick={handleClick}>
-            {change ? (
-              <BsFillSunFill className="sun" />
-            ) : (
-              <BsFillMoonStarsFill className="moon" />
-            )}
-          </button>
-        </div>
+        <button className="themeButton" onClick={handleClick}>
+          {theme === "light" ? (
+            <BsFillMoonStarsFill className="moon" />
+          ) : (
+            <BsFillSunFill className="sun" />
+          )}
+        </button>
       </div>
     </div>
   );
