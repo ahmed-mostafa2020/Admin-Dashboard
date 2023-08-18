@@ -21,6 +21,7 @@
 
     .icon {
       cursor: pointer;
+      color: red;
 
       @include sm {
         display: none;
